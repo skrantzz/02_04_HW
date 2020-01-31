@@ -26,12 +26,16 @@
 // - .setItem
 // iii. getting local storage
 // - .getItem
+var moment = require("moment");
+
+console.log(moment().format("MMMM Do YYYY, h:mm:ss a"));
+
+// $("#header").text(moment().date());
 
 $(".saveButton").on("click", function() {
   event.preventDefault();
   //   console.log(this);
   var eventDescription = $(this);
-  console.log(eventDescription);
   // var eventTime;
-  // localStorage.setItem(eventTime, eventDescription)
+  localStorage.setItem(eventTime, eventDescription);
 });

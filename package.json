@@ -1,0 +1,22 @@
+{
+  "name": "02_04_hw",
+  "version": "1.0.0",
+  "description": "feb 4 homework",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syd107/02_04_HW.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syd107/02_04_HW/issues"
+  },
+  "homepage": "https://github.com/syd107/02_04_HW#readme",
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
+}
