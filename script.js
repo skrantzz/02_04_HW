@@ -26,16 +26,34 @@
 // - .setItem
 // iii. getting local storage
 // - .getItem
-var moment = require("moment");
+// iv. if there's already entries in local storage for that day, it should show on the page at right times
 
-console.log(moment().format("MMMM Do YYYY, h:mm:ss a"));
+var inputValue = $("#currentDate").text(
+  moment().format("MMMM Do, YYYY, h:mm a")
+);
 
-// $("#header").text(moment().date());
+var monthDayYear = moment().format("MMMM Do, YYYY");
 
 $(".saveButton").on("click", function() {
   event.preventDefault();
-  //   console.log(this);
-  var eventDescription = $(this);
-  // var eventTime;
-  localStorage.setItem(eventTime, eventDescription);
+  var eventTimeStringify = JSON.stringify($(".time"));
+  var eventDescription = $(this).siblings(".textInput")[0].value;
+  var eventTime = $(this).siblings(".time")[0].innerText;
+  var dataId = $(this)
+    .siblings(".time")
+    .attr("data-id");
+  localStorage.setItem(dataId, eventDescription);
 });
+
+function init() {
+  // var getItem = localStorage.getItem();
+  $(".time").each(function(i, time) {
+    var dataId = time.getAttribute("data-id");
+    var activity = localStorage.getItem(dataId);
+    var textInput = $(this).siblings(".textInput");
+    if (activity != null) {
+      textInput.val(activity);
+    }
+  });
+}
+init();

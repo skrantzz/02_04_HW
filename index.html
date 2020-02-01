@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="node_modules/moment/moment.js"></script>
     <script
-      src="/Users/sydneykrantz/node_modules/moment"
-      <script
       src="https://kit.fontawesome.com/1c0bd760ad.js"
       crossorigin="anonymous"
     ></script>
@@ -22,16 +21,18 @@
   <body>
     <header class="jumbotron text-center" id="header">
       <h1>Work Day Planner</h1>
+      <div id="currentDate"></div>
     </header>
-    <!-- rows and columns for time -->
+
+    <!-- rows and column time -- id="    <div class="co
     <div class="container">
       <!-- B -->
       <div class="row">
-        <div class="col-md-1" id="time">
+        <div class="col-md-1 time" data-id="9am">
           9am
         </div>
 
-        <textarea class="col-md-10" id="textInput"></textarea>
+        <textarea class="col-md-10 textInput"></textarea>
 
         <button class="col-md-1 btn saveButton">
           <i class="far fa-save">
@@ -40,11 +41,11 @@
         </button>
       </div>
       <div class="row">
-        <div class="col-md-1" id="time">
+        <div class="col-md-1 time" data-id="10am">
           10am
         </div>
 
-        <textarea class="col-md-10" id="textInput"></textarea>
+        <textarea class="col-md-10 textInput"></textarea>
 
         <button class="col-md-1 btn saveButton">
           <i class="far fa-save">
@@ -53,11 +54,11 @@
         </button>
       </div>
       <div class="row">
-        <div class="col-md-1" id="time">
+        <div class="col-md-1 time" data-id="11am">
           11am
         </div>
 
-        <textarea class="col-md-10" id="textInput"></textarea>
+        <textarea class="col-md-10 textInput"></textarea>
 
         <button class="col-md-1 btn saveButton">
           <i class="far fa-save">
@@ -66,11 +67,11 @@
         </button>
       </div>
       <div class="row">
-        <div class="col-md-1" id="time">
+        <div class="col-md-1 time" data-id="12pm">
           12pm
         </div>
 
-        <textarea class="col-md-10" id="textInput"></textarea>
+        <textarea class="col-md-10 textInput"></textarea>
 
         <button class="col-md-1 btn saveButton">
           <i class="far fa-save">
@@ -79,11 +80,11 @@
         </button>
       </div>
       <div class="row">
-        <div class="col-md-1" id="time">
+        <div class="col-md-1 time" data-id="1pm">
           1pm
         </div>
 
-        <textarea class="col-md-10" id="textInput"></textarea>
+        <textarea class="col-md-10 textInput"></textarea>
 
         <button class="col-md-1 btn saveButton">
           <i class="far fa-save">
@@ -92,11 +93,11 @@
         </button>
       </div>
       <div class="row">
-        <div class="col-md-1" id="time">
+        <div class="col-md-1 time" data-id="2pm">
           2pm
         </div>
 
-        <textarea class="col-md-10" id="textInput"></textarea>
+        <textarea class="col-md-10 textInput"></textarea>
 
         <button class="col-md-1 btn saveButton">
           <i class="far fa-save">
@@ -105,11 +106,11 @@
         </button>
       </div>
       <div class="row">
-        <div class="col-md-1" id="time">
+        <div class="col-md-1 time" data-id="3pm">
           3pm
         </div>
 
-        <textarea class="col-md-10" id="textInput"></textarea>
+        <textarea class="col-md-10 textInput"></textarea>
 
         <button class="col-md-1 btn saveButton">
           <i class="far fa-save">
@@ -118,11 +119,11 @@
         </button>
       </div>
       <div class="row">
-        <div class="col-md-1" id="time">
+        <div class="col-md-1 time" data-id="4pm">
           4pm
         </div>
 
-        <textarea class="col-md-10" id="textInput"></textarea>
+        <textarea class="col-md-10 textInput"></textarea>
 
         <button class="col-md-1 btn saveButton">
           <i class="far fa-save">
@@ -131,11 +132,11 @@
         </button>
       </div>
       <div class="row">
-        <div class="col-md-1" id="time">
+        <div class="col-md-1 time" data-id="5pm">
           5pm
         </div>
 
-        <textarea class="col-md-10" id="textInput"></textarea>
+        <textarea class="col-md-10 textInput"></textarea>
 
         <button class="col-md-1 btn saveButton">
           <i class="far fa-save">
