@@ -17,6 +17,9 @@
 // -gray - past
 // -red - present
 // -green - future
+// a. if my time is > current time ,future
+// b. if time is < current time, past
+// c. if time === current time , present
 
 // II. JS
 // A. current day function (moment.js)
@@ -26,7 +29,7 @@
 // - .setItem
 // iii. getting local storage
 // - .getItem
-// iv. if there's already entries in local storage for that day, it should show on the page at right times
+// // iv. if there's already entries in local storage for that day, it should show on the page at right times
 
 var inputValue = $("#currentDate").text(
   moment().format("MMMM Do, YYYY, h:mm a")
@@ -53,6 +56,15 @@ function init() {
     var textInput = $(this).siblings(".textInput");
     if (activity != null) {
       textInput.val(activity);
+    }
+    if (moment(dataId, "h a").hour() <= moment().hour()) {
+      $(".textInput").addClass("secondary");
+    }
+    if (moment(dataId, "h a").hour() >= moment().hour()) {
+      $(".textInput").addClass("success");
+    }
+    if (moment(dataId, "h a").hour() == moment().hour()) {
+      $(".textInput").addClass("info");
     }
   });
 }
