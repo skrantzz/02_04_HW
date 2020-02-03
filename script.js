@@ -31,6 +31,8 @@
 // - .getItem
 // // iv. if there's already entries in local storage for that day, it should show on the page at right times
 
+$(".btn").addClass("btn-warning");
+
 var inputValue = $("#currentDate").text(
   moment().format("MMMM Do, YYYY, h:mm a")
 );
@@ -57,14 +59,14 @@ function init() {
     if (activity != null) {
       textInput.val(activity);
     }
-    if (moment(dataId, "h a").hour() <= moment().hour()) {
-      $(".textInput").addClass("secondary");
+    if (moment(dataId, "h a").hour() < moment().hour()) {
+      $(textInput).addClass("past");
     }
-    if (moment(dataId, "h a").hour() >= moment().hour()) {
-      $(".textInput").addClass("success");
+    if (moment(dataId, "h a").hour() > moment().hour()) {
+      $(textInput).addClass("future");
     }
     if (moment(dataId, "h a").hour() == moment().hour()) {
-      $(".textInput").addClass("info");
+      $(textInput).addClass("present");
     }
   });
 }

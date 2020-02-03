@@ -1,3 +1,35 @@
 body {
-  padding: 0;
+  font-family: "Roboto Mono", monospace;
+}
+
+.btn {
+  border: 2px rgb(233, 144, 174) solid;
+  background-color: rgb(247, 115, 100);
+}
+.row {
+  background-color: rgb(232, 178, 250);
+}
+
+h1 {
+  background-color: rgb(233, 144, 174);
+  width: 20px;
+}
+#header {
+  background-color: rgb(114, 222, 186);
+}
+
+.jumbotron {
+  padding: 30px;
+}
+
+.past {
+  background-color: lightgray;
+}
+
+.future {
+  background-color: rgb(244, 244, 115);
+}
+
+.present {
+  background-color: rgb(128, 216, 128);
 }
