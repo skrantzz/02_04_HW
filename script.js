@@ -41,9 +41,11 @@ var monthDayYear = moment().format("MMMM Do, YYYY");
 
 $(".saveButton").on("click", function() {
   event.preventDefault();
+  console.log($("this"));
   var eventTimeStringify = JSON.stringify($(".time"));
   var eventDescription = $(this).siblings(".textInput")[0].value;
   var eventTime = $(this).siblings(".time")[0].innerText;
+
   var dataId = $(this)
     .siblings(".time")
     .attr("data-id");

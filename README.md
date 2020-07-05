@@ -1,5 +1,13 @@
-# 02_04_HW
 
-Need a bit of color in your life? This simple work day calendar will manage your time effectively.
 
-Yay!
+## DAILY PLANNER
+
+<table>
+<tr>
+<td>
+  A simple, but colorful, HTML + CSS daily planner to brighten your day
+</td>
+</tr>
+</table>
+<br>
+  <img src="./ss.jpg" alt="plantkins"  width="1200" height="550px"/>
